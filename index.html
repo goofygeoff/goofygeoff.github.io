@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">\>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" , initial-scale="1.0">
+	<title>GOOFYgeoff</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400&display=swap" rel="stylesheet">	
+</head>
+
+<body>
+	<Div id="wrapper">
+		<div id="content-container">
+			<header>
+				<img src="pink.png" width="400">
+				<h2 id="clock"></h2>
+			</header>
+
+
+			<nav class="nav" id="main-nav">
+				<ul>
+					<li>
+						<a href="XXX">
+						page 1
+						</a>
+					</li>
+					<li>
+						<a href="XXX">
+						page 2
+						</a>
+					</li>
+					<li>
+						<a href="XXX">
+						page x
+						</a>
+					</li>
+						
+					
+				</ul>
+			</nav>
+
+			<nav class="social" id="secondary-nav">
+				<ul>
+					<li>instagram</li>
+					<li>email</li>
+				</ul>
+			</nav>
+		</div>
+
+	</Div>
+
+<script>
+var span = document.getElementById('clock');
+
+function formatDate() {
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+
+  var month = date.getMonth()+1;
+  month = month < 10 ? '0'+month : month;
+  span.textContent = date.getDate() + "/" + month + "/" + date.getFullYear() + "  " + strTime;
+}
+
+setInterval(formatDate, 10);
+</script>
+
+</body>
+
+</html>
